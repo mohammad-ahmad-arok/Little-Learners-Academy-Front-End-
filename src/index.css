@@ -125,3 +125,13 @@ h6 {
   color: var(--dimBlack-color);
   background: var(--primary-color);
 }
+
+.line{
+  position: relative;
+}
+.line::after{
+   content: "" !important;
+   position: absolute !important;
+   width: 200px !important;
+   background-color: red !important;
+}

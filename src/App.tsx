@@ -1,7 +1,13 @@
+import Values from "./components/valuesandmisson/Values";
+import About from "./pages/about/About";
 import styles from "./styles";
 
 function App() {
-  return <h1 className={`${styles.heading} text-primary`}>Hello Team</h1>;
+  return (
+    <div>
+      <About/>
+    </div>
+  )
 }
 
 export default App;
