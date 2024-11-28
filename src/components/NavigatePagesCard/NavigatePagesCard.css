@@ -1,0 +1,9 @@
+.line-dashed {
+    background:
+        radial-gradient(30px 80px, #FFBE99 80%, transparent 87%) 0 0/70px 100%;
+}
+
+.line-dashed-2 {
+    background:
+        radial-gradient(28px 20px, #000 80%, transparent 30%) 0 0/69px 100%;
+}

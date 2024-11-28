@@ -25,6 +25,11 @@ export default {
         Grey_35: "#59595A",
         Grey_40: "#656567",
         Grey_60: "#98989A",
+      },
+      boxShadow: {
+        'custom-lg': '8px 8px',
+        'custom-normal': '6px 6px',
+        'custom-md': '4px 4px',
       }
     },
   },

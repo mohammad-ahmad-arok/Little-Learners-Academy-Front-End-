@@ -97,6 +97,10 @@ h6 {
   --dimBlack-color: #191919;
 }
 
+body {
+  background: #fff5f0;
+}
+
 /* ===scrollbar=== */
 ::-webkit-scrollbar {
   width: 6px;
