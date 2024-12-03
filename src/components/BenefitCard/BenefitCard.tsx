@@ -5,7 +5,7 @@ import "./BenefitCard.css";
 interface BenefitCardProps {
   title: string;
   para: string;
-  icon: React.ReactNode;
+  icon: React.ReactNode | string;
 }
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, para }) => {
   return (
@@ -18,6 +18,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, para }) => {
           absolute -top-8 left-5"
         >
           <div className="p-5 ">{icon}</div>
+          {/* <img src={icon} className="p-5 " alt={title} /> */}
         </div>
         <div className="bode">
           <h4 className="md:text-[28px] text-[22px] font-[700]">{title}</h4>

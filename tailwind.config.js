@@ -51,6 +51,8 @@ export default {
         'custom-lg': '8px 8px',
         'custom-normal': '6px 6px',
         'custom-md': '4px 4px',
+        'section-shadow': '6px 6px 0px 1px #1E1E1E',
+        'card-shadow': '6px 6px 0px 2px #1E1E1E',
       }
     },
   },
