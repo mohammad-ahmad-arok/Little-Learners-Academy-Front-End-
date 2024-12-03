@@ -16,7 +16,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/about/About";
-import Addmissions from "./pages/Addmissions"
+import Admissions from "./pages/Admissions"
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<About />} />
-        <Route path="/Admissions" element={<Addmissions />} />
+        <Route path="/Admissions" element={<Admissions />} />
       </Routes>
       <Footer />
     </>
