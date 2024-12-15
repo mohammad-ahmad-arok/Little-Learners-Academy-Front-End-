@@ -104,10 +104,12 @@ body {
 /* ===scrollbar=== */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track  {
   background-color: #001e2138;
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -139,3 +141,4 @@ body {
    width: 200px !important;
    background-color: red !important;
 }
+

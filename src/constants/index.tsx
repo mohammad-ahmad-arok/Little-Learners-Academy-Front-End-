@@ -144,3 +144,75 @@ export const shortLinks = [
     ],
   },
 ];
+
+export const AddmisionProcess = [
+  {
+    number_step: "01",
+    title: "Inquiry",
+    desc: "Submit an inquiry form through our website or contact our admissions office to express your interest in Little Learners Academy.",
+  },
+  {
+    number_step: "02",
+    title: "School Tour",
+    desc: "SSchedule a personalized school tour to explore our campus, meet our staff, and gain insights into our nurturing learning environment.",
+  },
+  {
+    number_step: "03",
+    title: "Application Form",
+    desc: "Complete the application form and provide the required documents, including your child's birth certificate, medical records, and any previous academic records (if applicable).",
+  },
+  {
+    number_step: "04",
+    title: "Parent Interview",
+    desc: "We value parent engagement, and a meeting with our admissions team allows us to understand your child's needs and ensure Little Learners Academy aligns with your family's expectations.",
+  },
+  {
+    number_step: "05",
+    title: "Student Assessment",
+    desc: "For certain age groups, a student assessment may be conducted to understand their developmental progress and ensure the best placement.",
+  },
+  {
+    number_step: "06",
+    title: "Acceptance",
+    desc: "Once the admission process is complete, you will receive an official acceptance letter from Little Learners Academy.",
+  },
+];
+
+export const programs = [
+  {
+    program: "Nursery",
+    ageGroup: "2 - 3 Years",
+    annualTuition: "$1,686",
+    registrationFee: "$162",
+    activityFee: "$12",
+  },
+  {
+    program: "Pre - Kindergartens",
+    ageGroup: "3 - 4 Years",
+    annualTuition: "$2,686",
+    registrationFee: "$220",
+    activityFee: "$16",
+  },
+  {
+    program: "Kindergarten",
+    ageGroup: "4 - 5 Years",
+    annualTuition: "$3,686",
+    registrationFee: "$340",
+    activityFee: "$20",
+  },
+];
+
+export const AdditionalServices=[
+  {
+   title:"Before and After-School Care",
+   desc:"$120 / per month"
+  },
+  {
+    title:"Language Immersion Program",
+    desc:"$60 / per semester"
+   },
+   {
+    title:"Transportation (optional)",
+    desc:"$80 / per month"
+   }
+]
