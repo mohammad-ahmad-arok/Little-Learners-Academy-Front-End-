@@ -17,7 +17,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/about/About";
 import Admissions from "./pages/Admissions"
-import StudentLife from "./pages/StudentLife";
+
 
 function App() {
   return (
@@ -28,8 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<About />} />
         <Route path="/Admissions" element={<Admissions />} />
-        <Route path="/StudentLife" element={<StudentLife />} />
-      </Routes>
+
       <Footer />
     </>
   );
