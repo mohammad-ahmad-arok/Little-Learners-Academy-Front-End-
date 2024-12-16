@@ -1,3 +1,4 @@
+
 // <<<<<<< HEAD
 // import Values from "./components/valuesandmisson/Values";
 // import About from "./pages/about/About";
@@ -16,7 +17,8 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import About from "./pages/about/About";
-import Admissions from "./pages/Admissions"
+import ContactPage from "./pages/contact/Contact";
+import Admissions from "./pages/Admissions";
 
 
 function App() {
@@ -26,13 +28,14 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/AboutUs" element={<About />} />
         <Route path="/Admissions" element={<Admissions />} />
 
       <Footer />
     </>
   );
-// >>>>>>> 65c8c59be52b41fac2756852c410e3ef1f1a2506
 }
 
 export default App;
