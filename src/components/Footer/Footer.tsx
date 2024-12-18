@@ -13,11 +13,7 @@ const Footer = () => {
       <div className="links flex justify-between md:flex-nowrap flex-wrap  gap-2 ">
         <div className="company md:max-w-[440px] max-w-full">
           <div className="info">
-            <img
-              src="/assets/Logo.png"
-              className="md:w-56 w-44 mx-auto"
-              alt="Logo"
-            />
+            <img src="/assets/Logo.png" className="md:w-56 w-44" alt="Logo" />
             <p className="md:text-[20px] text-[16px] md:text-start text-center font-medium mt-5 text-Grey_30 ">
               We believe in the power of play to foster creativity,
               problem-solving skills, and imagination.
