@@ -1,0 +1,90 @@
+/* General Container Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdf4f2;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.button {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Right Section */
+.right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #f79669;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}

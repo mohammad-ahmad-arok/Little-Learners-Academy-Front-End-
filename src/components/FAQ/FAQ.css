@@ -1,0 +1,15 @@
+.faqs .faq .faq-question {
+  transition: all 0.4s ease;
+}
+
+.faqs .faq .faq-answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqs .faq.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
