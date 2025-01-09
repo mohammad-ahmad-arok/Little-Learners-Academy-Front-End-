@@ -17,7 +17,9 @@ const Rooms = () => {
 
   useEffect(() => {
     // fetch api to get all rooms
-    fetch("http://localhost:5000/api/rooms")
+    fetch(
+      "https://little-learners-academy-back-end-j3iu.onrender.com/api/rooms"
+    )
       .then((response) => response.json())
       .then((data) => {
         setrooms(data.data);
@@ -28,14 +30,18 @@ const Rooms = () => {
   useEffect(() => {
     // get data by room's id
     if (roomSelected != "All") {
-      fetch(`http://localhost:5000/api/rooms/${roomSelected}`)
+      fetch(
+        `https://little-learners-academy-back-end-j3iu.onrender.com/api/rooms/${roomSelected}`
+      )
         .then((response) => response.json())
         .then((data) => {
           setrooms([data.data]);
         })
         .catch((error) => console.error("Error:", error));
     } else {
-      fetch(`http://localhost:5000/api/rooms`)
+      fetch(
+        `https://little-learners-academy-back-end-j3iu.onrender.com/api/rooms`
+      )
         .then((response) => response.json())
         .then((data) => {
           setrooms(data.data);

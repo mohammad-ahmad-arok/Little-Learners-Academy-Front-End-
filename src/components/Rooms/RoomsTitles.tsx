@@ -14,7 +14,9 @@ export const RoomTitles = ({
 
   useEffect(() => {
     // fetch api to get all rooms
-    fetch("http://localhost:5000/api/rooms")
+    fetch(
+      "https://little-learners-academy-back-end-j3iu.onrender.com/api/rooms"
+    )
       .then((response) => response.json())
       .then((data) => {
         setAllrooms(data.data);

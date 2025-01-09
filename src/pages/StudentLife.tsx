@@ -1,36 +1,51 @@
-import { FaGraduationCap } from "react-icons/fa";
+// import { FaGraduationCap } from "react-icons/fa";
 import Abstract from "../Assets/Abstract-Design.png";
 import BenefitCard from "../components/BenefitCard/BenefitCard";
 import Events from "../components/Events/Events";
 import SectionHeader from "../components/SectionHeader/SectionHeader";
-import { BenefitsCards } from "../constants";
+// import { BenefitsCards } from "../constants";
 import { layout } from "../styles";
+import { subject } from "../components/Subjects/StudentsLearn";
+import { useEffect, useState } from "react";
 const StudentLife = () => {
-  const StudentSupportCards = [
-    {
-      icon: <FaGraduationCap size={30} />,
-      title: "Holistic Learning Approach",
-      para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
-    },
-    {
-      icon: <FaGraduationCap size={30} />,
-      title: "Holistic Learning Approach",
-      para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
-    },
-    {
-      icon: <FaGraduationCap size={30} />,
-      title: "Holistic Learning Approach",
-      para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
-    },
-  ];
+  const [activities, setactivities] = useState<subject[]>([]);
+  const [StudentSupport, setStudentSupport] = useState<subject[]>([]);
 
-  // useEffect(() => {
-  //   // fetch api to get all features
-  //   fetch("http://localhost:5000/api/specialfeatures")
-  //     .then((response) => response.json())
-  //     .then((data) => setFeatures(data.data))
-  //     .catch((error) => console.error("Error:", error));
-  // }, []);
+  // const StudentSupportCards = [
+  //   {
+  //     icon: <FaGraduationCap size={30} />,
+  //     title: "Holistic Learning Approach",
+  //     para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
+  //   },
+  //   {
+  //     icon: <FaGraduationCap size={30} />,
+  //     title: "Holistic Learning Approach",
+  //     para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
+  //   },
+  //   {
+  //     icon: <FaGraduationCap size={30} />,
+  //     title: "Holistic Learning Approach",
+  //     para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
+  //   },
+  // ];
+
+  useEffect(() => {
+    // fetch api to get all features
+    fetch(
+      "https://little-learners-academy-back-end-j3iu.onrender.com/api/activities"
+    )
+      .then((response) => response.json())
+      .then((data) => setactivities(data.data))
+      .catch((error) => console.error("Error:", error));
+    //////////////////////////////////////////
+    fetch(
+      "https://little-learners-academy-back-end-j3iu.onrender.com/api/benefits?limit=3"
+    )
+      .then((response) => response.json())
+      .then((data) => setStudentSupport(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
+  // console.log(StudentSupport);
 
   return (
     <div>
@@ -77,13 +92,13 @@ const StudentLife = () => {
           para="At Little Learners Academy, we believe in nurturing well-rounded individuals. Our extracurricular activities offer a diverse range of experiences that complement our academic curriculum and encourage students to explore their interests and passions. We offer a wide array of extracurricular activities, including"
         />
         <div className={`${layout.cardContainer} gap-x-10 gap-y-20 mt-24`}>
-          {BenefitsCards.map((el: any, index) => {
+          {activities.map((el, index) => {
             return (
               <BenefitCard
                 key={index}
-                icon={el.icon}
-                title={el.title}
-                para={el.para}
+                icon={el.image.url}
+                title={el.name}
+                para={el.description}
               />
             );
           })}
@@ -99,15 +114,24 @@ const StudentLife = () => {
           para="At Little Learners Academy, we are committed to providing a supportive and nurturing environment that meets the unique needs of each student. Our student support services include"
         />
         <div className={`${layout.cardContainer} gap-x-10 gap-y-20 mt-24`}>
-          {StudentSupportCards.map((el: any, index) => {
+          {StudentSupport.map((el, index) => {
             return (
               <BenefitCard
                 key={index}
-                icon={el.icon}
-                title={el.title}
-                para={el.para}
+                icon={el.icon.url}
+                title={el.name}
+                para={el.description}
               />
             );
+            // StudentSupportCards.map((el, index) => {
+            //   return (
+            //     <BenefitCard
+            //       key={index}
+            //       icon={el.icon}
+            //       title={el.title}
+            //       para={el.para}
+            //     />
+            //   );
           })}
         </div>
       </section>

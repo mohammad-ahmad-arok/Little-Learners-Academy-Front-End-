@@ -1,21 +1,20 @@
-
 type subject = {
-    name: string;
-    description: string;
-    image: string ;
-  };
+  name: string;
+  description: string;
+  image: string;
+};
 interface EventCard {
   card: subject;
 }
 
- const Event2 = ({ card }: EventCard) => {
+const Event2 = ({ card }: EventCard) => {
   return (
     <div
       className="relative bg-white rounded-xl shadow-card-shadow lg:w-[31.25%] w-[100%] flex flex-col justify-center items-center
                gap-[30px] border-2 border-Grey_15 xl:gap-[40px] 2xl:gap-[50px] p-[1.875rem] xl:p-[2.5rem] 2xl:p-[3.125rem] mb-[30px] xl:mb-[40px] 2xl:mb-[50px]"
     >
       <div className="absolute bg-Orange_95 w-[100%] h-[20%] 2xl:h-[20%] top-1/4 -translate-y-1/4  border-2 border-Grey_15  z-0"></div>
-      <img src="assets/images/Image.png" className="z-10" alt={card.name} />
+      <img src={card.image.url} className="z-10 w-auto" alt={card.name} />
       <div className="text-center flex flex-col ">
         <h5
           className="mb-[10px] xl:mb-[14px] 2xl:mb-[20px] text-[22px] 
@@ -33,4 +32,4 @@ interface EventCard {
     </div>
   );
 };
-export default Event2
+export default Event2;

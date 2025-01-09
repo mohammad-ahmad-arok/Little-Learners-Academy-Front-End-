@@ -54,9 +54,9 @@ export const Room = ({ room }: RoomProps) => {
             return (
               <SwiperSlide key={index}>
                 <img
-                  src={item}
+                  src={item.url}
                   alt={room.name}
-                  className=" rounded-xl border-2 border-[Grey_15]"
+                  className=" rounded-xl border-2 border-[Grey_15] w-auto"
                 />
               </SwiperSlide>
             );
@@ -64,7 +64,7 @@ export const Room = ({ room }: RoomProps) => {
         </Swiper>
       </div>
       <div
-        className="lg:pt-[12%] top-[50%] pt-[40%] md:pt-[20%] w-[100%]   bg-white border-2
+        className="lg:pt-[12%] top-[60%] pt-[40%] md:pt-[20%] w-[100%]   bg-white border-2
            rounded-xl border-Grey_15 shadow-card-shadow absolute
       "
       >

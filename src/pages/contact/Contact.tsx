@@ -13,7 +13,7 @@ const ContactPage: React.FC = () => {
           className="bg-white mx-[auto] w-[91.79vw] xl:w-[88.89vw] 2xl:[94.79] relative
      flex flex-col xl:flex-row px-[6.25%] py-[50px] xl:py-[100px] 2xl:py-[152.5px] gap-5 xl:gap-[50px]
      justify-center items-center border-2 border-[#262626] rounded-[10px] 
-     shadow-section-shadow mb-[80px] lg:mb-[150px]  xl:mt-[60px] mt-[40px]"
+     shadow-section-shadow mb-[80px] lg:mb-[150px]   "
         >
           <img
             src={Abstract}

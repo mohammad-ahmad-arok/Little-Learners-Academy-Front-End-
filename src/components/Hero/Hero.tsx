@@ -1,12 +1,6 @@
 // import React from "react";
 import Abstract from "../../assets/AboutPageAssets/Abstract Design.svg";
-
-interface HeroProps {
-  header: string;
-  title: string;
-  para: string;
-}
-const Hero: React.FC<HeroProps> = ({ para, title, header }) => {
+const Hero = ({ page, title, description }: any) => {
   return (
     <div
       className="bg-white mx-[auto] w-[91.79vw] xl:w-[88.89vw] 2xl:[94.79] relative
@@ -24,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ para, title, header }) => {
           className="text-[14px] xl:text-[16px]  font-[500] text-[#333333] 
         w-[101px] h-[37px] xl:w-[110px] xl:h-[40px] border-2 rounded-md border-[#262626] mb-[10px]"
         >
-          {header}
+          {page}
         </button>
         <h3 className="text-[28px] xl:text-[38px] font-[700] text-center xl:text-start text-[#1A1A1A]">
           {title}
@@ -34,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ para, title, header }) => {
         className="xl:w-[42%] text-[16px] 2xl:text-[20px]
        font-[500] text-[#333333] text-center xl:text-start"
       >
-        {para}
+        {description}
       </p>
     </div>
   );

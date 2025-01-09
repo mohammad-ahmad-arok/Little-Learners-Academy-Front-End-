@@ -11,7 +11,7 @@ export const SubjectCard = ({ card }: subjectCard) => {
                gap-[30px] xl:gap-[40px] 2xl:gap-[50px] p-[1.875rem] xl:p-[2.5rem] 2xl:p-[3.125rem] mb-[30px] xl:mb-[40px] 2xl:mb-[50px]"
     >
       <div className="absolute bg-Orange_95 w-[25%] h-[65%] 2xl:h-[70%] top-0 border-2 border-Grey_15 rounded-b-xl z-0"></div>
-      <img src={card.image} className="z-10" alt={card.name} />
+      <img src={card.image.url} className="z-10 w-auto" alt={card.name} />
       <div className="text-center flex flex-col ">
         <h5
           className="mb-[10px] xl:mb-[14px] 2xl:mb-[20px] text-[22px] 
