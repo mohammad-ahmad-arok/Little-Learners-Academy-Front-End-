@@ -1,8 +1,16 @@
 import { FaArrowRight } from "react-icons/fa";
 import "./Header.css";
 import styles from "../../styles";
+import { useEffect, useRef } from "react";
+import { fadeIn } from "../../Animation/fadeIn";
 
 const Header = () => {
+  // const imageRef = useRef<HTMLImageElement>(null);
+
+  // useEffect(() => {
+  //   fadeIn(imageRef.current, 0.9);
+  // }, []);
+
   return (
     <div className={`${styles.paddingX} sm:mt-5 mt-7 cursor-pointer`}>
       <div
@@ -27,6 +35,7 @@ const Header = () => {
           src="/assets/images/Abstract Design-03.webp"
           className="absolute top-0 sm:left-[25%] left-0 sm:w-[72px] w-8"
           alt="Abstract Design"
+          // ref={imageRef}
         />
         <div className="text w-full py-3 flex items-center justify-center gap-3">
           <span className={`${styles.paragraph} sm:!text-[20px] !text-[14px]`}>

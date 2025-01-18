@@ -18,7 +18,7 @@ const History = () => {
       )
         .then((res) => res.json())
         .then((data) => {
-          sethistory(data);
+          sethistory(data.data);
         });
     } catch (error) {
       console.error("Error:", error);
@@ -33,15 +33,16 @@ const History = () => {
         para="Founded with a passion for early education in 2005, our kindergarten school boasts a rich history of empowering young learners to reach their potential through innovative teaching methods and a supportive learning environment"
       />
       <div
+        data-aos="zoom-in"
         className={`history flex justify-center mt-6 gap-32 relative ${styles.cardStyle}`}
       >
         <div className="md:p-36 p-5 relative">
           {history.map((el: any, index) => (
             <div key={index} className="mt-24">
-              <div className="flex items-center gap-12 relative">
-                <div className="absolute -ml-20 flex items-center ">
+              <div className="md:flex items-center gap-12 relative">
+                <div className="absolute md:-ml-20 md:mt-0 mt-16 flex items-center ">
                   <span
-                    className={`absolute ml-1.5 top-5 w-2 h-60 block  bg-primary rounded-md ${
+                    className={`absolute ml-1.5 top-5 w-2 h-96 block  bg-primary rounded-md ${
                       index === history.length - 1 ? "hidden" : ""
                     }`}
                   ></span>
@@ -50,7 +51,7 @@ const History = () => {
                   <span className=" w-5 h-5 block border-2 border-black rounded-full bg-white"></span>
                 </div>
                 <div
-                  className={`${styles.cardStyle} max-w-fit w-full flex px-12 py-7 gap-6`}
+                  className={`${styles.cardStyle} max-w-fit w-full flex md:ml-0 ml-20 px-12 py-7 gap-6`}
                 >
                   <img
                     src="/src/Assets/AboutPageAssets/Abstract DesignHs.svg"
@@ -61,7 +62,7 @@ const History = () => {
                     {el.year}
                   </h2>
                 </div>
-                <div className="">
+                <div className="md:ml-0 ml-8 md:mt-0 mt-4">
                   <h3 className="md:text-[28px] text-[20px] font-[700]">
                     {el.title}
                   </h3>

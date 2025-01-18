@@ -89,7 +89,9 @@ h5,
 h6 {
   font-family: "Raleway", serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --primary-color: #ff8d4c;
   --dimGray-color: #b3b3b3;

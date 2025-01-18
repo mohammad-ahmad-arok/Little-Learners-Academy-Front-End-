@@ -18,7 +18,7 @@ const Values = () => {
       )
         .then((res) => res.json())
         .then((data) => {
-          setmissionAndVision(data);
+          setmissionAndVision(data.data);
         });
     } catch (error) {
       console.error("Error:", error);
@@ -35,7 +35,11 @@ const Values = () => {
 
       <div className={`flex xs:flex-col lg:flex-row gap-10 ${styles.paddingX}`}>
         {missionAndVision.map((el: any, index) => (
-          <div className={`${styles.cardStyle} p-12`} key={index}>
+          <div
+            data-aos="fade-down"
+            className={`${styles.cardStyle} p-12`}
+            key={index}
+          >
             <div className="flex justify-between items-center">
               <h2 className="font-bold text-5xl">{el.title}</h2>
               <img

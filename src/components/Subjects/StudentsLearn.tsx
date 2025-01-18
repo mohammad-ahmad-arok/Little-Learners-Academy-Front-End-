@@ -13,7 +13,6 @@ const StudentsLearn = () => {
   const [subjects, setsubjects] = useState<subject[]>([]);
 
   useEffect(() => {
-    // fetch api to get all subjects
     fetch(
       "https://little-learners-academy-back-end-j3iu.onrender.com/api/subjects"
     )
@@ -21,7 +20,6 @@ const StudentsLearn = () => {
       .then((data) => setsubjects(data.data))
       .catch((error) => console.error("Error:", error));
   }, []);
-  // console.log(subjects);
 
   return (
     <div className="mx-[auto] w-[91.79vw] xl:w-[88.89vw] 2xl:[94.79] flex flex-col mb-[50px]">

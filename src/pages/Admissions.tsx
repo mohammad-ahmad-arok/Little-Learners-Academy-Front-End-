@@ -103,7 +103,10 @@ const Admissions = () => {
         />
 
         {/* First Table */}
-        <div className="p-6 bg-white table-auto   shadow-md border border-black mt-24 md:shadow-custom-lg shadow-black overflow-x-auto ">
+        <div
+          data-aos="zoom-in"
+          className="p-6 bg-white table-auto   shadow-md border border-black mt-24 md:shadow-custom-lg shadow-black overflow-x-auto "
+        >
           <table className=" border-separate   overflow-hidden border-spacing-0 ">
             <thead>
               <tr className="bg-Orange_95  shadow border border-black text-Grey_15 text-[20px]">
@@ -124,31 +127,6 @@ const Admissions = () => {
                 </th>
               </tr>
             </thead>
-
-            {/* <tbody>
-              <tr>
-                <td></td>
-              </tr>
-
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-            </tbody> */}
 
             <tbody>
               {Fee.map((ele, index) => (
@@ -190,7 +168,10 @@ const Admissions = () => {
 
         {/* Second Table */}
 
-        <div className="p-6 bg-white   shadow-md border border-black mt-24 md:shadow-custom-lg shadow-black overflow-x-auto ">
+        <div
+          data-aos="zoom-in"
+          className="p-6 bg-white   shadow-md border border-black mt-24 md:shadow-custom-lg shadow-black overflow-x-auto "
+        >
           <table className=" border-separate border border-Grey_15 w-full   overflow-hidden  border-spacing-0 mb-4 rounded-xl">
             <thead>
               <tr className="bg-Orange_95   shadow  text-Grey_15 text-[30px] ">

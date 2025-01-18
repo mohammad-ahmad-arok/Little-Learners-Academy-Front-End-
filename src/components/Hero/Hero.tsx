@@ -1,6 +1,15 @@
 // import React from "react";
+import { useEffect, useRef } from "react";
 import Abstract from "../../assets/AboutPageAssets/Abstract Design.svg";
+import { setupImageAnimation } from "../../Animation/imageAnimation";
 const Hero = ({ page, title, description }: any) => {
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const cleanup = setupImageAnimation(imageRef);
+    return cleanup;
+  }, []);
+
   return (
     <div
       className="bg-white mx-[auto] w-[91.79vw] xl:w-[88.89vw] 2xl:[94.79] relative
@@ -9,6 +18,7 @@ const Hero = ({ page, title, description }: any) => {
      shadow-section-shadow mb-[80px] lg:mb-[150px]  xl:mt-[60px] mt-[40px]"
     >
       <img
+        ref={imageRef}
         src={Abstract}
         className="lg:w-[11%] w-[28%] absolute top-0 left-0"
         alt="Abstract-Design"

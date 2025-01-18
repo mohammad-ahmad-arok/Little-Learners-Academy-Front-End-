@@ -7,6 +7,7 @@ interface subjectCard {
 export const SubjectCard = ({ card }: subjectCard) => {
   return (
     <div
+      data-aos="zoom-in"
       className="relative bg-white rounded-xl shadow-card-shadow lg:w-[31.25%] w-[100%] flex flex-col justify-center items-center
                gap-[30px] xl:gap-[40px] 2xl:gap-[50px] p-[1.875rem] xl:p-[2.5rem] 2xl:p-[3.125rem] mb-[30px] xl:mb-[40px] 2xl:mb-[50px]"
     >

@@ -1,33 +1,13 @@
-// import { FaGraduationCap } from "react-icons/fa";
 import Abstract from "../Assets/Abstract-Design.png";
 import BenefitCard from "../components/BenefitCard/BenefitCard";
 import Events from "../components/Events/Events";
 import SectionHeader from "../components/SectionHeader/SectionHeader";
-// import { BenefitsCards } from "../constants";
 import { layout } from "../styles";
 import { subject } from "../components/Subjects/StudentsLearn";
 import { useEffect, useState } from "react";
 const StudentLife = () => {
   const [activities, setactivities] = useState<subject[]>([]);
   const [StudentSupport, setStudentSupport] = useState<subject[]>([]);
-
-  // const StudentSupportCards = [
-  //   {
-  //     icon: <FaGraduationCap size={30} />,
-  //     title: "Holistic Learning Approach",
-  //     para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
-  //   },
-  //   {
-  //     icon: <FaGraduationCap size={30} />,
-  //     title: "Holistic Learning Approach",
-  //     para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
-  //   },
-  //   {
-  //     icon: <FaGraduationCap size={30} />,
-  //     title: "Holistic Learning Approach",
-  //     para: "Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.",
-  //   },
-  // ];
 
   useEffect(() => {
     // fetch api to get all features
@@ -37,15 +17,14 @@ const StudentLife = () => {
       .then((response) => response.json())
       .then((data) => setactivities(data.data))
       .catch((error) => console.error("Error:", error));
-    //////////////////////////////////////////
+
     fetch(
       "https://little-learners-academy-back-end-j3iu.onrender.com/api/benefits?limit=3"
     )
       .then((response) => response.json())
-      .then((data) => setStudentSupport(data))
+      .then((data) => setStudentSupport(data.data))
       .catch((error) => console.error("Error:", error));
   }, []);
-  // console.log(StudentSupport);
 
   return (
     <div>

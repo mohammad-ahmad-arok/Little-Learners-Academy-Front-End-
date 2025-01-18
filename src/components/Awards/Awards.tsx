@@ -20,7 +20,7 @@ const Awards = () => {
       )
         .then((res) => res.json())
         .then((data) => {
-          setAwards(data);
+          setAwards(data.data);
         });
     } catch (error) {
       console.error("Error:", error);

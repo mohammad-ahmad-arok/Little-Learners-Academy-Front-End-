@@ -1,6 +1,8 @@
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import styles from "../../styles";
 import "./TestimonialsCard.css";
+import { useEffect, useRef } from "react";
+import { jumpingStarsAnimation } from "../../Animation/jump";
 
 interface TestimonialsCardProps {
   image?: string;
@@ -8,31 +10,45 @@ interface TestimonialsCardProps {
   star: number;
   text?: string;
 }
+
 const renderStars = (evaluation: number) => {
   const fullStars = Math.floor(evaluation);
   const halfStar = evaluation % 1 >= 0.5 ? 1 : 0;
   const emptyStars = 5 - fullStars - halfStar;
 
   return (
-    <div className="stars w-full  flex items-center justify-center gap-1">
+    <div className="stars w-full flex items-center justify-center gap-1">
       {[...Array(fullStars)].map((_, index) => (
-        <FaStar key={index} size={20} color="#FF8D4C" />
+        <FaStar className="star" key={index} size={20} color="#FF8C4C" />
       ))}
-      {halfStar === 1 && <FaStarHalfAlt size={20} color="#FF8D4C" />}
+      {halfStar === 1 && (
+        <FaStarHalfAlt className="star" size={20} color="#FF8C4C" />
+      )}
       {[...Array(emptyStars)].map((_, index) => (
-        <FaRegStar key={index} size={20} color="#FF8D4C" />
+        <FaRegStar className="star" key={index} size={20} color="#FF8C4C" />
       ))}
     </div>
   );
 };
+
 const TestimonialsCard: React.FC<TestimonialsCardProps> = ({
   image,
   text,
   name,
   star,
 }) => {
+  // animation
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    jumpingStarsAnimation(cardRef.current);
+  }, []);
+
   return (
-    <div className={`TestimonialsCard ${styles.cardStyle} md:p-12 p-7 `}>
+    <div
+      ref={cardRef}
+      className={`TestimonialsCard ${styles.cardStyle} md:p-12 p-7`}
+    >
       <div className="profile text-center">
         <img
           src={image}

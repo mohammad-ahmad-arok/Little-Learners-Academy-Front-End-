@@ -10,6 +10,7 @@ interface BenefitCardProps {
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, para }) => {
   return (
     <div
+      data-aos="fade-up"
       className={`BenefitCard ${styles.cardStyle} relative md:px-12 px-6 pt-20 pb-12 md:w-[30%] w-full`}
     >
       <div className="header">

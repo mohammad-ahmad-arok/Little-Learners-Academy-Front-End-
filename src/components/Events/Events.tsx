@@ -18,14 +18,7 @@ const Events = () => {
       .then((data) => setevents(data.data))
       .catch((error) => console.error("Error:", error));
   }, []);
-  // const events: any = [
-  //     {name: "Annual Sports Day" , description : "Celebrations of diverse cultural festivals, promoting cultural exchange and appreciation"},
-  //     {name: "Annual Sports Day" , description : "Celebrations of diverse cultural festivals, promoting cultural exchange and appreciation"},
-  //     {name: "Annual Sports Day" , description : "Celebrations of diverse cultural festivals, promoting cultural exchange and appreciation"},
-  //     {name: "Annual Sports Day" , description : "Celebrations of diverse cultural festivals, promoting cultural exchange and appreciation"},
-  //     {name: "Annual Sports Day" , description : "Celebrations of diverse cultural festivals, promoting cultural exchange and appreciation"},
-  //     {name: "Annual Sports Day" , description : "Celebrations of diverse cultural festivals, promoting cultural exchange and appreciation"},
-  // ]
+
   return (
     <div className="mx-[auto] w-[91.79vw] xl:w-[88.89vw] 2xl:[94.79] flex flex-col mb-[50px] sm:pt-[6.3rem] pt-10">
       <SectionHeader
@@ -34,7 +27,10 @@ const Events = () => {
         para="At Little Learners Academy, we celebrate every milestone and create cherished memories for our students. Throughout the year, we host a variety of events and celebrations that bring the entire school community together. Some of our memorable events include"
       />
 
-      <div className="flex flex-col lg:flex-row flex-wrap gap-[3%] mt-24">
+      <div
+        data-aos="zoom-in-up"
+        className="flex flex-col lg:flex-row flex-wrap gap-[3%] mt-24"
+      >
         {events.map((item: any, index: any) => {
           if (index == 1 || index == 4)
             return <Event key={index} card={item} />;

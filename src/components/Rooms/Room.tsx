@@ -27,7 +27,7 @@ export const Room = ({ room }: RoomProps) => {
   };
 
   return (
-    <div className="relative ">
+    <div data-aos="zoom-in-up" className="relative ">
       <div className="mx-[3.125%]">
         <Swiper
           ref={swiperRef}
@@ -50,7 +50,7 @@ export const Room = ({ room }: RoomProps) => {
           modules={[FreeMode, Pagination]}
           className="cursor-pointer"
         >
-          {room.images.map((item, index) => {
+          {room.images.map((item: any, index) => {
             return (
               <SwiperSlide key={index}>
                 <img

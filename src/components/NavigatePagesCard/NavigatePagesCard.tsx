@@ -17,6 +17,7 @@ const NavigatePagesCard: React.FC<NavigatePagesCardProps> = ({
 }) => {
   return (
     <div
+      data-aos="fade-up"
       className={`NavigatePagesCard ${styles.cardStyle} relative md:px-12 px-10 md:pt-20 pt-10 md:pb-12 pb-10 md:w-[45%] w-full text-center`}
     >
       <div className="header">

@@ -5,6 +5,7 @@
   align-items: center;
   gap: 2rem;
 }
+
 .student-form-header {
   text-align: center;
 }
@@ -88,6 +89,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
 /* img{
   width: 34px;
 } */
@@ -143,6 +145,7 @@
   outline: none;
   background-color: #fffcfa;
 }
+
 textarea {
   resize: none;
 }
@@ -175,6 +178,7 @@ textarea {
 
 /* Responsive for Laptop Screens */
 @media (max-width: 1024px) {
+
   .student-form-header h1,
   .student-form-header p {
     width: 90%;
@@ -251,7 +255,7 @@ textarea {
     font-size: 0.8rem;
   }
 
-  img {
+  /* img {
     width: 24px;
-  }
+  } */
 }

@@ -1,53 +1,7 @@
 import { useEffect, useState } from "react";
-import Img from "../../Assets/AboutPageAssets/Abstract DesignHs.svg";
 import styles, { layout } from "../../styles";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import { IoMdMail } from "react-icons/io";
-
-const teamMembers = [
-  {
-    name: "Sarah A Sarah",
-    img: Img,
-    desc: "Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn.",
-    qualification:
-      "Qualification:Bachelors Degree in Early Childhood Education",
-  },
-  {
-    name: "Sarah A Sarah",
-    img: Img,
-    desc: "Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn.",
-    qualification:
-      "Qualification:Bachelors Degree in Early Childhood Education",
-  },
-  {
-    name: "Sarah A Sarah",
-    img: Img,
-    desc: "Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn.",
-    qualification:
-      "Qualification:Bachelors Degree in Early Childhood Education",
-  },
-  {
-    name: "Sarah A Sarah",
-    img: Img,
-    desc: "Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn.",
-    qualification:
-      "Qualification:Bachelors Degree in Early Childhood Education",
-  },
-  {
-    name: "Sarah A Sarah",
-    img: Img,
-    desc: "Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn.",
-    qualification:
-      "Qualification:Bachelors Degree in Early Childhood Education",
-  },
-  {
-    name: "Sarah A Sarah",
-    img: Img,
-    desc: "Ms. Sarah is a passionate educator with over 10 years of experience in guiding young minds. Her warm and nurturing approach creates a welcoming classroom environment where children feel comfortable to explore and learn.",
-    qualification:
-      "Qualification:Bachelors Degree in Early Childhood Education",
-  },
-];
 
 const Team = () => {
   const [team, setTeam] = useState([]);
@@ -65,7 +19,7 @@ const Team = () => {
       )
         .then((res) => res.json())
         .then((data) => {
-          setTeam(data);
+          setTeam(data.data);
         });
     } catch (error) {
       console.error("Error:", error);
@@ -80,8 +34,12 @@ const Team = () => {
         para="At Little Learners Academy, our teaching team is the heart of our educational journey. We take great pride in employing highly qualified and passionate educators who possess a deep understanding of early childhood development. Our teachers create a warm and engaging atmosphere, encouraging curiosity, instilling confidence, and fostering a love for learning."
       />
       <div className="grid lg:grid-cols-2 lg:grid-rows-3 xs:grid-rows-1 gap-6 mt-8">
-        {teamMembers.map((el: any, index) => (
-          <div className={`p-12 ${styles.cardStyle}`} key={index}>
+        {team.map((el: any, index) => (
+          <div
+            data-aos="fade-down"
+            className={`p-12 ${styles.cardStyle}`}
+            key={index}
+          >
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-center">
                 <img
@@ -92,7 +50,7 @@ const Team = () => {
                 <h2 className="font-extrabold text-2xl ml-3">{el.name}</h2>
               </div>
               <span className="p-3 rounded-md border-2 text-sm bg-Orange_97 border-black cursor-pointer">
-                <IoMdMail size={24}/>
+                <IoMdMail size={24} />
               </span>
             </div>
 

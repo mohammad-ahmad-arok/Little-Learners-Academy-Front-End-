@@ -11,8 +11,6 @@ import { useState, useEffect } from "react";
 const AcademicsPage = () => {
   const [Features, setFeatures] = useState<subject[]>([]);
   useEffect(() => {
-    // fetch api to get all features
-    //process.env.MONGO_URL
     fetch(
       "https://little-learners-academy-back-end-j3iu.onrender.com/api/specialfeatures"
     )
@@ -20,7 +18,6 @@ const AcademicsPage = () => {
       .then((data) => setFeatures(data.data))
       .catch((error) => console.error("Error:", error));
   }, []);
-  // console.log(Features);
 
   return (
     <>
