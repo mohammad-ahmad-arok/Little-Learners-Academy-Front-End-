@@ -45,7 +45,7 @@ const AcademicsPage = () => {
             return (
               <BenefitCard
                 key={index}
-                icon={el.image}
+                icon={el.image.url}
                 title={el.name}
                 para={el.description}
               />
