@@ -1,7 +1,7 @@
 type subject = {
   name: string;
   description: string;
-  image: string;
+  image: any;
 };
 interface EventCard {
   card: subject;

@@ -1,8 +1,4 @@
-import {
-  AddmisionProcess,
-  programs,
-  AdditionalServices,
-} from "../constants/index";
+import { programs } from "../constants/index";
 import SectionHeader from "../components/SectionHeader/SectionHeader";
 import { layout } from "../styles";
 import ProcessCard from "../components/ProcessCard/ProcessCard";

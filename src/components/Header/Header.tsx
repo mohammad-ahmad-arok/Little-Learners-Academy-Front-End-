@@ -1,16 +1,8 @@
 import { FaArrowRight } from "react-icons/fa";
 import "./Header.css";
 import styles from "../../styles";
-import { useEffect, useRef } from "react";
-import { fadeIn } from "../../Animation/fadeIn";
 
 const Header = () => {
-  // const imageRef = useRef<HTMLImageElement>(null);
-
-  // useEffect(() => {
-  //   fadeIn(imageRef.current, 0.9);
-  // }, []);
-
   return (
     <div className={`${styles.paddingX} sm:mt-5 mt-7 cursor-pointer`}>
       <div
