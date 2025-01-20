@@ -27,7 +27,12 @@ const NavBar = () => {
             {navItems.map((el, index) => {
               return (
                 <li className="" key={index}>
-                  <Link to={el.path} onClick={() => setactiveNavItem(index)}>
+                  <Link
+                    to={el.path}
+                    onClick={() => {
+                      setactiveNavItem(index);
+                    }}
+                  >
                     <span
                       className={`
                         border-r-2  border-Grey_15 px-8 py-6 flex hover:bg-Orange_97
@@ -82,7 +87,10 @@ const NavBar = () => {
                     <li className="" key={index}>
                       <Link
                         to={el.path}
-                        onClick={() => setactiveNavItem(index)}
+                        onClick={() => {
+                          setactiveNavItem(index);
+                          setnavToggel(false);
+                        }}
                       >
                         <span
                           className={`
