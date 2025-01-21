@@ -1,14 +1,14 @@
-import React, { useRef, useEffect } from "react";
+// Loader.tsx
+import React, { useRef, useEffect, forwardRef } from "react";
 import { gsap } from "gsap";
 import "./Loader.css";
 
-const Loader: React.FC = () => {
-  const loaderRef = useRef<HTMLDivElement>(null);
+const Loader = forwardRef<HTMLDivElement>((props, ref) => {
   const waveRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (loaderRef.current) {
-      gsap.from(loaderRef.current, {
+    if (ref && typeof ref !== "function") {
+      gsap.from(ref.current, {
         y: -50,
         duration: 1,
         ease: "power2.out",
@@ -22,11 +22,11 @@ const Loader: React.FC = () => {
         ease: "power2.out",
       });
     }
-  }, []);
+  }, [ref]);
 
   return (
     <div
-      ref={loaderRef}
+      ref={ref}
       className="fixed w-screen h-screen top-0 left-0 flex justify-center items-center bg-Orange_95 bg-opacity-75 backdrop-blur-xl z-50"
     >
       <div className="loader"></div>
@@ -37,6 +37,6 @@ const Loader: React.FC = () => {
       ></div>
     </div>
   );
-};
+});
 
 export default Loader;

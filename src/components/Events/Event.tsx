@@ -13,7 +13,7 @@ const Event = ({ card }: EventCard) => {
       className="relative bg-white rounded-xl shadow-card-shadow lg:w-[31.25%] w-[100%] flex flex-col justify-center items-center
                gap-[30px] border-2 border-Grey_15 xl:gap-[40px] 2xl:gap-[50px] p-[1.875rem] xl:p-[2.5rem] 2xl:p-[3.125rem] mb-[30px] xl:mb-[40px] 2xl:mb-[50px]"
     >
-      <div className="absolute bg-Orange_95 w-[100%] h-[20%] 2xl:h-[20%] top-1/2 -translate-y-1/2 border-2 border-Grey_15  z-0"></div>
+      <div className="absolute bg-Orange_95 w-[100%] h-[16%] 2xl:h-[20%] top-1/2 -translate-y-1/2 border-2 border-Grey_15  z-0"></div>
       <img src={card.image.url} className="z-10 w-auto" alt={card.name} />
       <div className="text-center flex flex-col ">
         <h5

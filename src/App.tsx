@@ -45,6 +45,12 @@ function App() {
       });
     }
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      animateLoaderExit();
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     AOS.init();
@@ -52,11 +58,7 @@ function App() {
 
   return (
     <>
-      {isLoading && (
-        <div ref={loaderRef}>
-          <Loader />
-        </div>
-      )}
+      {isLoading && <Loader ref={loaderRef} />}
       <>
         <Header />
         <NavBar />

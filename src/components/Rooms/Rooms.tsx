@@ -60,7 +60,7 @@ const Rooms = () => {
         supTitle="Our Gallery"
         para="Step into our Gallery and immerse yourself in a visual journey of cherished moments and unforgettable experiences at our kindergarten school."
       />
-      <div className="allRooms w-[100%] py-10 sm:py-[6.3rem]">
+      <div className="allRooms w-[100%] py-10 sm:py-[6.3rem] pb-32">
         <RoomTitles
           roomSelected={roomSelected}
           setroomSelected={setroomSelected}
