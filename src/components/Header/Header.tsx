@@ -1,8 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import "./Header.css";
 import styles from "../../styles";
-import { useEffect, useRef } from "react";
-import { fadeIn } from "../../Animation/fadeIn";
 
 const Header = () => {
   // const imageRef = useRef<HTMLImageElement>(null);

@@ -1,8 +1,8 @@
 // Loader.tsx
-import React, { useRef, useEffect, forwardRef } from "react";
+import { useRef, useEffect, forwardRef } from "react";
 import { gsap } from "gsap";
 import "./Loader.css";
-
+// @ts-ignore */}
 const Loader = forwardRef<HTMLDivElement>((props, ref) => {
   const waveRef = useRef<HTMLDivElement>(null);
 

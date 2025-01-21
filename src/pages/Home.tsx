@@ -5,7 +5,7 @@ import NavigatePagesCard from "../components/NavigatePagesCard/NavigatePagesCard
 import SectionHeader from "../components/SectionHeader/SectionHeader";
 import Slider from "../components/Slider/Slider";
 import TestimonialsCard from "../components/TestimonialsCard/TestimonialsCard";
-import { BenefitsCards, navigatePagesCards } from "../constants";
+import { navigatePagesCards } from "../constants";
 import { layout } from "../styles";
 import { useEffect, useRef, useState } from "react";
 import { typingAnimation } from "../Animation/Typing";

@@ -1,7 +1,10 @@
 // import imag from "../../assets/academics/Image1.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
+// @ts-ignore */}
 import "swiper/css";
+// @ts-ignore */}
 import "swiper/css/pagination";
+// @ts-ignore */}
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 
