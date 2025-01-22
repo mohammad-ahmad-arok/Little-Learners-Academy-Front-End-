@@ -7,7 +7,7 @@ import { subject } from "../components/Subjects/StudentsLearn";
 import { useEffect, useState } from "react";
 const StudentLife = () => {
   const [activities, setactivities] = useState<subject[]>([]);
-  const [StudentSupport, setStudentSupport] = useState<subject[]>([]);
+  const [StudentSupport, setStudentSupport] = useState<any[]>([]);
 
   useEffect(() => {
     // fetch api to get all features
@@ -19,7 +19,7 @@ const StudentLife = () => {
       .catch((error) => console.error("Error:", error));
 
     fetch(
-      "https://little-learners-academy-back-end-j3iu.onrender.com/api/benefits?limit=3"
+      "https://little-learners-academy-back-end-j3iu.onrender.com/api/student-support"
     )
       .then((response) => response.json())
       .then((data) => setStudentSupport(data.data))
@@ -97,20 +97,11 @@ const StudentLife = () => {
             return (
               <BenefitCard
                 key={index}
-                icon={el.icon.url}
+                icon={el.image.url}
                 title={el.name}
                 para={el.description}
               />
             );
-            // StudentSupportCards.map((el, index) => {
-            //   return (
-            //     <BenefitCard
-            //       key={index}
-            //       icon={el.icon}
-            //       title={el.title}
-            //       para={el.para}
-            //     />
-            //   );
           })}
         </div>
       </section>

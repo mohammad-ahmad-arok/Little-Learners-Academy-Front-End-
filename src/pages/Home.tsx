@@ -108,6 +108,7 @@ const Home = () => {
     counterAnimation(counterRef2.current, 37, "+");
     counterAnimation(counterRef3.current, 15, "+");
   }, []);
+
   return (
     <>
       {/* hero */}
@@ -196,7 +197,7 @@ const Home = () => {
             return (
               <SwiperSlide key={index} className="p-2">
                 <TestimonialsCard
-                  image={el.image || "/assets/images/Vector.png"}
+                  image={el.image.url || "/assets/images/Vector.png"}
                   name={el.name}
                   star={el.evaluation}
                   text={el.description}

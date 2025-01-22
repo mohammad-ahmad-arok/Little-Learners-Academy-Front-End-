@@ -82,7 +82,10 @@ const NavBar = () => {
                     <li className="" key={index}>
                       <Link
                         to={el.path}
-                        onClick={() => setactiveNavItem(index)}
+                        onClick={() => {
+                          setactiveNavItem(index);
+                          setnavToggel((pre) => !pre);
+                        }}
                       >
                         <span
                           className={`
