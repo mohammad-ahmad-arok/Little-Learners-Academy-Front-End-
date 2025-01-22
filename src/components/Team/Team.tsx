@@ -9,7 +9,7 @@ const Team = () => {
   useEffect(() => {
     try {
       fetch(
-        "https://little-learners-academy-back-end-j3iu.onrender.com/api/team-member",
+        "https://little-learners-academy-back-end-j3iu.onrender.com/api/team-members",
         {
           method: "GET",
           headers: {
@@ -25,6 +25,7 @@ const Team = () => {
       console.error("Error:", error);
     }
   }, []);
+  console.log(team);
 
   return (
     <section className={`${layout.section} flex-col`}>
@@ -43,7 +44,7 @@ const Team = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-center">
                 <img
-                  src={el.img}
+                  src={el.photo.url}
                   className="border-2 border-black rounded w-24"
                   alt=""
                 />
@@ -58,7 +59,7 @@ const Team = () => {
               <p className="font-semibold text-xl text-left xs:p-2 p-6">
                 {el.qualification}
               </p>
-              <p className="font-medium">{el.desc}</p>
+              <p className="font-medium">{el.description}</p>
             </div>
           </div>
         ))}

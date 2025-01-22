@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import styles, { layout } from "../../styles";
 import Slider from "../Slider/Slider";
@@ -26,6 +26,8 @@ const Awards = () => {
       console.error("Error:", error);
     }
   }, []);
+  // console.log(Awards);
+
   return (
     <section className={`${layout.section} flex-col`}>
       <SectionHeader
@@ -45,7 +47,7 @@ const Awards = () => {
                   <div className="icon-box bg-Orange_90 border-2 border-black rounded-lg absolute -top-8 left-5">
                     <div className="p-5 ">
                       <img
-                        src={el.icon || "/assets/images/Vector.png"}
+                        src={el.image.url || "/assets/images/Vector.png"}
                         alt="icon"
                       />
                     </div>

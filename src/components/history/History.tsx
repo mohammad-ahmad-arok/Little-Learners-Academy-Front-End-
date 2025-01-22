@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles, { layout } from "../../styles";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import abstract from "../../Assets/AboutPageAssets/AbstractDesignHs.svg";
 
 const History = () => {
   const [history, sethistory] = useState([]);
@@ -53,11 +54,7 @@ const History = () => {
                 <div
                   className={`${styles.cardStyle} max-w-fit w-full flex md:ml-0 ml-20 md:px-12 px-7 md:py-7 py-4 gap-6`}
                 >
-                  <img
-                    src="/src/Assets/AboutPageAssets/Abstract DesignHs.svg"
-                    alt="Abstract"
-                    className="md:w-20 w-10"
-                  />
+                  <img src={abstract} alt="Abstract" className="md:w-20 w-10" />
                   <h2 className="md:text-[68px] text-[32px] font-bold">
                     {el.year}
                   </h2>

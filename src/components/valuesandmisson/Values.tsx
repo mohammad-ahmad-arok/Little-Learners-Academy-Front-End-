@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import Vision from "../../Assets/AboutPageAssets/visions.svg";
+import Mission from "../../Assets/AboutPageAssets/misson.svg";
 
 const Values = () => {
   const [missionAndVision, setmissionAndVision] = useState([]);
@@ -24,6 +26,7 @@ const Values = () => {
       console.error("Error:", error);
     }
   }, []);
+  // console.log(missionAndVision);
 
   return (
     <div className="flex flex-col items-center xs:text-center lg:text-left gap-5">
@@ -43,7 +46,7 @@ const Values = () => {
             <div className="flex justify-between items-center">
               <h2 className="font-bold text-5xl">{el.title}</h2>
               <img
-                src={el.img || "/src/Assets/AboutPageAssets/visions.svg"}
+                src={el.title == "Vision" ? Vision : Mission}
                 alt="visions"
               />
             </div>
